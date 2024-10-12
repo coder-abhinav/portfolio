@@ -1,0 +1,91 @@
+.top-head {
+  font-size: 16px !important;
+  position: relative;
+}
+.heading {
+  font-size: 48px;
+  font-weight: bolder;
+  margin-top: 5px;
+}
+.skill-logo {
+  height: 80px;
+  width: 80px;
+  padding-top: 20px;
+}
+
+.skill-card {
+  perspective: 1000px;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.skill-card.flipped .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.skill-card-front {
+  background-color: #1e1e1f;
+  z-index: 2;
+  transform: rotateY(0deg);
+  font-size: 14px;
+}
+
+.skill-card-back {
+  background-color: #1e1e1f;
+  transform: rotateY(180deg);
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  display: flex !important;
+}
+.carousel-primary {
+  overflow: hidden !important;
+  flex-wrap: wrap;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 20px;
+  left: 10%;
+  margin-top: 3%;
+}
+.skill-card-front p {
+  height: max-content;
+}
+.skill-card-back p {
+  height: auto !important;
+  font-size: 16px;
+  padding: 0 10px;
+  margin-bottom: 0 !important;
+  line-height: 26px;
+  text-align: left;
+}

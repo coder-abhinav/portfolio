@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: black;
+}
+
+main {
+  width: 800px;
+  margin: 0 auto;
+}
+
+main h1 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.heading-container {
+  padding-top: 8%;
+}
+
+.top-head {
+  font-size: 16px !important;
+  position: relative;
+
+  height: fit-content;
+}
+
+.slide-row {
+  display: flex;
+  width: 4000px;
+  transition: transform 0.5s;
+  overflow: hidden;
+}
+
+.slide-col {
+  width: 800px;
+  height: 400px;
+  position: relative;
+}
+
+.hero img {
+  height: 100%;
+  width: 320px;
+  min-height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-left: 23rem;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+}
+.content p {
+  height: fit-content;
+  color: black;
+}
+.content .text {
+  font-size: 18px;
+}
+.modal-btn {
+  color: #7a01ec;
+  cursor: pointer;
+}
+.modal-btn:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(92, 93, 97) !important;
+  margin-top: 5px;
+}
+
+.content h2 {
+  color: black;
+  margin-top: 10px;
+  height: fit-content;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0px;
+}
+
+.indicator .btn {
+  height: 15px;
+  width: 15px;
+  margin: 4px;
+  border-radius: 40%;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn.active {
+  width: 30px;
+}
+
+.slider {
+  overflow-x: hidden;
+}

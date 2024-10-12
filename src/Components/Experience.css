@@ -1,0 +1,100 @@
+.heading-container {
+  margin-top: 8%;
+}
+.top-head {
+  font-size: 16px !important;
+  position: relative;
+}
+.heading {
+  font-size: 48px !important;
+  font-weight: bolder;
+  margin-top: 5px;
+}
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.company {
+  text-align: left;
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px 25px;
+}
+.company:hover {
+  border-radius: 10px;
+  animation: scale 0.5s ease-in 1;
+  outline: 1px solid white;
+}
+
+.company-name {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.dates {
+  margin-top: 5px;
+}
+.position {
+  margin: 5px 0px 20px 0px;
+  font-weight: bolder;
+}
+.company-logo-container {
+  width: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.experiences {
+  display: flex;
+}
+.company-logo {
+  height: 150px;
+  width: fit-content;
+}
+
+.company-logo:hover {
+  animation: shake 0.5s 1;
+}
+.company-link {
+  height: 30px;
+  cursor: pointer;
+}
+
+.company-link:hover {
+  animation: spin 0.5s 1;
+}
+
+@media (max-width: 1200px) {
+  .experiences {
+    display: block;
+  }
+  .company-logo-container {
+    width: 100%;
+  }
+  .company {
+    width: 100%;
+    text-align: center;
+  }
+  .company-name {
+    justify-content: center;
+  }
+}
+@media (max-width: 414px) {
+  .top-head {
+    font-size: 14px !important;
+  }
+  ul {
+    list-style: none;
+  }
+  .company-logo-container {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .company-image {
+    max-width: 350px;
+    height: 200px;
+  }
+}

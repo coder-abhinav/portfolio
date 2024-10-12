@@ -1,0 +1,101 @@
+/* Initial modal state */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.3s ease;
+  max-width: 800px;
+  color: black;
+  border-radius: 10px;
+}
+
+/* Modal content box */
+.modal-container {
+  background: #fff;
+  padding: 25px;
+  width: 800px;
+  max-height: 500px;
+  border-radius: 10px;
+  position: relative;
+  animation: slide-down 0.4s ease-out;
+  white-space: pre-line;
+  text-align: left;
+}
+
+.modal-close {
+  animation: slide-up 0.4s ease-out;
+}
+
+/* Title and Close button styles */
+.modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed black;
+  padding: 2%;
+}
+.modal-title p {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Close button styles */
+.close-btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 25px !important;
+  width: 25px;
+}
+
+.close-btn:hover {
+  animation: spin 0.5s ease-in-out 1;
+}
+
+.modal-content {
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 15px;
+  height: fit-content !important;
+}
+
+/* Open state: Visible modal */
+.modal-open {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+/* Close state: Hidden modal */
+.modal-close {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+
+.name-title-container {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.name-title-container p {
+  height: fit-content;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #a2a4adff;
+}

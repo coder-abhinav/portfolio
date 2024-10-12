@@ -1,0 +1,18 @@
+.footer-container {
+  margin: 40px 0px;
+}
+.footer-content p {
+  height: fit-content;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c2c0c0;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quote-by {
+  /* font-weight: 100 !important; */
+  text-align: end;
+}

@@ -1,0 +1,52 @@
+.intro-container {
+  flex-direction: column;
+}
+.intro-image-container {
+  margin-top: 7%;
+}
+.intro-image {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: #eeeeee59 0px 5px 15px;
+}
+.wrapper {
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 20px 0;
+}
+.flip div {
+  animation: flip 6s infinite;
+  transition: 0.5s;
+  animation-delay: 2s;
+  z-index: -1;
+}
+
+p {
+  display: inline-block;
+  height: 30px;
+  overflow: hidden;
+  margin: 0px 2px;
+  font-size: 30px;
+  position: relative;
+}
+span {
+  display: block;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+.icons {
+  cursor: pointer;
+  margin: "10px 0";
+  height: 30px;
+  width: 30px;
+}
+.icons:hover {
+  animation: spin 0.5s ease-in 1;
+}
