@@ -42,9 +42,7 @@ const Navbar = ({ homeRef, experienceRef, testimonialsRef }) => {
             <p onClick={() => scrollToSection("testimonial")}>Testimonials</p>
           </li>
         )}
-        <li>
-          <p href="#contact">Contact</p>
-        </li>
+
         <li>
           <a href={RESUME_LINK} target="blank">
             Resume
