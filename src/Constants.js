@@ -58,7 +58,7 @@ export const TESTEMONIALS = [
     content:
       "I had the pleasure of collaborating with Abhinav on several web development projects, and I can confidently say he is one of the most talented and dedicated developers I've encountered. His expertise in the MERN stack (MongoDB, Express.js, React.js, and Node.js) is exceptional. \nI highly recommend Abhinav to anyone seeking a skilled and reliable MERN stack developer. His work ethic, technical knowledge, and problem-solving abilities make him an invaluable asset to any development team.",
     name: "Vipul Kumar",
-    title: "Procurment Head @Flipkart",
+    title: "Senior Manager II,Supply Chain Control Tower @Flipkart",
     image: VipulProfile,
   },
 
