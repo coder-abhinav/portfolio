@@ -125,4 +125,4 @@ export const QUOTE = {
 };
 
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/1KTRfT2ifVQm701ZtLO7K4PBmlV-WthC_/view?usp=sharing";
+  "https://drive.google.com/file/d/11_gGtacR5HiciN_MouiN1l5XxagGtcEu/view?usp=sharing";
