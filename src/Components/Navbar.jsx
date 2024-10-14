@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { RESUME_LINK } from "../Constants";
+import { openLink } from "../helper";
 const Navbar = ({ homeRef, experienceRef, testimonialsRef }) => {
   const width = window.innerWidth;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,6 +29,10 @@ const Navbar = ({ homeRef, experienceRef, testimonialsRef }) => {
     }
   };
 
+  const handleResumeClick = () => {
+    openLink(RESUME_LINK);
+  };
+
   return (
     <nav className="navbar">
       <ul className={isMobileMenuOpen ? "nav-links mobile-menu" : "nav-links"}>
@@ -42,11 +47,8 @@ const Navbar = ({ homeRef, experienceRef, testimonialsRef }) => {
             <p onClick={() => scrollToSection("testimonial")}>Testimonials</p>
           </li>
         )}
-
         <li>
-          <a href={RESUME_LINK} target="blank">
-            Resume
-          </a>
+          <p onClick={() => handleResumeClick()}>Resume</p>
         </li>
       </ul>
       <div className="hamburger" onClick={toggleMobileMenu}>

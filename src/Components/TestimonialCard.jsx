@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import "./Testimonial.css";
-import { truncate } from "../helper";
+import { openLink, truncate } from "../helper";
 import TestimonialModal from "./TestimonialModal";
 import { useDispatch } from "react-redux";
 import { setIsTestimonialModalOpen } from "../Reducers/TestimonialsSlice";
 
-const TestimonialCard = ({ name = "", title = "", text = "", image }) => {
+const TestimonialCard = ({
+  name = "",
+  title = "",
+  text = "",
+  link = "",
+  image,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -17,6 +23,10 @@ const TestimonialCard = ({ name = "", title = "", text = "", image }) => {
   const handleModalClose = () => {
     setIsModalOpen(false);
     dispatch(setIsTestimonialModalOpen(false));
+  };
+
+  const redirectToLinkedIn = (profileLink) => {
+    openLink(profileLink);
   };
 
   return (
@@ -33,8 +43,13 @@ const TestimonialCard = ({ name = "", title = "", text = "", image }) => {
             Read more
           </span>
         </p>
-        <h2>{name}</h2>
-        <p className="title">{title}</p>
+        <h2
+          onClick={() => redirectToLinkedIn(link)}
+          className="testimonial-name"
+        >
+          {name}
+        </h2>
+        <p className="testimonial-title">{title}</p>
       </div>
       <div className="hero">
         <img src={image} alt={name} />
