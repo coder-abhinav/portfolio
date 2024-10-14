@@ -53,7 +53,7 @@ const Testimonial = ({ scrollRef }) => {
           Afraid of "what people might think", I often wonder what they actually
           think about me. Let’s hear it from them.
         </p>
-        <h1>Testimonials</h1>
+        <div className="heading">Testimonials</div>
       </div>
       <div className="slider">
         <div className="slide-row" ref={slideRowRef}>
@@ -63,6 +63,7 @@ const Testimonial = ({ scrollRef }) => {
               name={testimonial.name}
               title={testimonial.title}
               image={testimonial.image}
+              link={testimonial.link}
               key={index}
             />
           ))}

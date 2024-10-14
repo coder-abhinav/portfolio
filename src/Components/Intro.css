@@ -11,7 +11,7 @@
   box-shadow: #eeeeee59 0px 5px 15px;
 }
 .wrapper {
-  font-size: 30px;
+  font-size: 41px;
   font-weight: bolder;
   padding: 20px 0;
 }
@@ -20,11 +20,12 @@
   transition: 0.5s;
   animation-delay: 2s;
   z-index: -1;
+  font-size: 41px;
 }
 
 p {
   display: inline-block;
-  height: 30px;
+  height: 41px;
   overflow: hidden;
   margin: 0px 2px;
   font-size: 30px;
@@ -43,7 +44,6 @@ span {
 
 .icons {
   cursor: pointer;
-  margin: "10px 0";
   height: 30px;
   width: 30px;
 }

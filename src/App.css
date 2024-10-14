@@ -8,7 +8,7 @@
   height: max-content;
   align-items: center;
   font-size: 18px;
-  font-family: "Source Sans 3";
+  font-family: "Source Sans 3" !important;
   padding: 0 10%;
   display: flex;
   flex-direction: column;
