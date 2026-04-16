@@ -35,9 +35,8 @@ main .heading {
 
 .slide-row {
   display: flex;
-  width: 4000px;
-  transition: transform 0.5s;
-  overflow: hidden;
+  width: max-content;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide-col {
