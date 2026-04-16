@@ -4,7 +4,21 @@ import KunalProfile from "./assets/images/kunal-profile.png";
 import DagarProfile from "./assets/images/dagar-profile.jpeg";
 import RupaliProfile from "./assets/images/rupali-profile.png";
 import CapgridLogo from "./assets/logos/capgrid-logo.png";
-import FreelanceLogo from "./assets/logos/freelance-logo.webp";
+import Email from "./assets/icons/email.svg";
+import Linkedin from "./assets/icons/linkedin.svg";
+import Instagram from "./assets/icons/instagram.svg";
+import Whatsapp from "./assets/icons/whatsapp.svg";
+import ReactLogo from "./assets/logos/React-logo.webp";
+import JsLogo from "./assets/logos/js-logo-removebg-preview.png";
+import MongoLogo from "./assets/logos/mongo-logo-removebg-preview.png";
+import ExpressLogo from "./assets/logos/express-logo.webp";
+import NodeLogo from "./assets/logos/node-logo-removebg-preview.png";
+import TsLogo from "./assets/logos/ts-logo-removebg-preview.png";
+import StorybookLogo from "./assets/logos/storybook-logo.png";
+import MUILogo from "./assets/logos/MUI-logo-removebg-preview.png";
+import GQLLogo from "./assets/logos/graphql-logo-removebg-preview.png";
+import VeronaLogo from "./assets/logos/veronaLogo.png";
+import FreelancerImg from "./assets/logos/freelancerImg.png";
 
 export const SDE_1_DETAILS = [
   "Pioneered the creation of a custom UI library, unlocking the ability to generate dynamic 3D visualizations of mechanical auto parts using Three.js, pushing the boundaries of interactive design.",
@@ -12,6 +26,14 @@ export const SDE_1_DETAILS = [
   "Implemented cutting-edge MongoDB Atlas search capabilities, crafting a highly reusable and intuitive Autocomplete UI that transformed the user search experience.",
   "Engineered progressive filtering APIs that empowered users to easily refine and access data, delivering smoother, more efficient interactions.",
   "Developed a powerful, custom API that synchronized frontend and backend data flows, slashing response times by 40% and significantly improving user satisfaction across platforms.",
+];
+
+export const VERONA_DETAILS = [
+  "Contributed to a production mobile app (iOS & Android) on React Native and TypeScript, working across navigation, state (Redux + persistence), and API integration (auth-aware HTTP client, retries, error states).",
+  "Helped ship monetization flows using in-app purchases,tying store purchases to backend verification, completion/finish steps, and success/failure analytics for subscriptions and one-time products.",
+  "Built user-facing trust & onboarding experiences, including camera-based liveness with real-time face checks and guided UI (Vision Camera + frame processing).",
+  "Implemented AI-assisted profile insights in-app (bottom sheet UX with loading/retry, progressive reveal, and user feedback to the backend).",
+  "Supported quality and releases with crash reporting (Sentry), over-the-air updates (CodePush), and product analytics (e.g. PostHog with session replay considerations), plus staging/production environment workflows.",
 ];
 
 export const CAPGRID_INTERN_DETAILS = [
@@ -95,6 +117,14 @@ export const PROFILE_SUMMARY =
 
 export const EXPERIENCES = [
   {
+    name: "Verona Matchmaking",
+    dates: "May 2025 - Present",
+    link: "https://verona.club",
+    details: VERONA_DETAILS,
+    post: "App Developer",
+    image: VeronaLogo,
+  },
+  {
     name: "Capgrid Solutions",
     dates: "January 2024 - July 2024",
     link: "https://capgrid.in/",
@@ -115,7 +145,7 @@ export const EXPERIENCES = [
     dates: "November 2022 - May 2022",
     details: FREELANCE_DETAILS,
     post: "Frontend Developer",
-    image: FreelanceLogo,
+    image: FreelancerImg,
   },
 ];
 
@@ -126,3 +156,83 @@ export const QUOTE = {
 
 export const RESUME_LINK =
   "https://drive.google.com/file/d/1jDtLGT6C2Ju8UBBCLl9VhuGNAwpSHu7d/view?usp=drive_link";
+
+export const SOCIAL_MEDIA_MAP = [
+  {
+    platform: "email",
+    icon: Email,
+    link: "mailto:abhinavsingh6633@gmail.com",
+  },
+  {
+    platform: "linkedin",
+    icon: Linkedin,
+    link: "https://linkedin.com/in/abhinavsingh654/",
+  },
+  {
+    platform: "instagram",
+    icon: Instagram,
+    link: "https://www.instagram.com/rajputabhinav654/",
+  },
+  {
+    platform: "whatsapp",
+    icon: Whatsapp,
+    link: "wa.me/+918587093885",
+  },
+];
+
+export const SKILL_SET = [
+  {
+    name: "React Js",
+    image: ReactLogo,
+    rating: 5,
+    backContent: SKILL_DETAILS.REACT_JS,
+  },
+  {
+    name: "JavaScript",
+    image: JsLogo,
+    rating: 5,
+    backContent: SKILL_DETAILS.JAVASCRIPT,
+  },
+  {
+    name: "Mongo Db",
+    image: MongoLogo,
+    rating: 3,
+    backContent: SKILL_DETAILS.MONGO_DB,
+  },
+  {
+    name: "Express Js",
+    image: ExpressLogo,
+    rating: 3,
+    backContent: SKILL_DETAILS.EXPRESS_JS,
+  },
+  {
+    name: "Node Js",
+    image: NodeLogo,
+    rating: 4,
+    backContent: SKILL_DETAILS.NODE_JS,
+  },
+  {
+    name: "TypeScript",
+    image: TsLogo,
+    rating: 5,
+    backContent: SKILL_DETAILS.TYPESCRIPT,
+  },
+  {
+    name: "Storybook",
+    image: StorybookLogo,
+    rating: 4,
+    backContent: SKILL_DETAILS.STORYBOOK,
+  },
+  {
+    name: "Material UI",
+    image: MUILogo,
+    rating: 5,
+    backContent: SKILL_DETAILS.MUI,
+  },
+  {
+    name: "Graphql",
+    image: GQLLogo,
+    rating: 4,
+    backContent: SKILL_DETAILS.GRAPH_QL,
+  },
+];

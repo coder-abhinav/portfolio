@@ -11,6 +11,7 @@ const TestimonialCard = ({
   text = "",
   link = "",
   image,
+  ariaHidden,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const TestimonialCard = ({
   };
 
   return (
-    <div className="slide-col">
+    <div className="slide-col" aria-hidden={ariaHidden || undefined}>
       <div className="content">
         <p className="text">
           {truncate(text, 200)}{" "}

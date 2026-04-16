@@ -36,7 +36,13 @@ const CompanyDetails = ({
       <ul>
         {details.length &&
           details.map((item, index) => {
-            return <li key={index}>{item}</li>;
+            return (
+              <li key={index}>
+                <p style={{ lineHeight: "1.5", letterSpacing: "0.5px" }}>
+                  {item}
+                </p>
+              </li>
+            );
           })}
       </ul>
     </div>

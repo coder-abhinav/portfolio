@@ -1,58 +1,69 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import { RESUME_LINK } from "../Constants";
-import { openLink } from "../helper";
-const Navbar = ({ homeRef, experienceRef, testimonialsRef }) => {
+
+const Navbar = () => {
   const width = window.innerWidth;
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Toggle the mobile menu
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((open) => !open);
   };
 
-  const scrollToSection = (key) => {
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleNavInteraction = () => {
     if (isMobileMenuOpen) {
-      toggleMobileMenu();
-    }
-    if (key === "home") {
-      homeRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (key === "experience") {
-      experienceRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-    }
-    if (key === "testimonial") {
-      testimonialsRef.current.scrollIntoView({ behavior: "smooth" });
+      closeMobileMenu();
     }
   };
 
-  const handleResumeClick = () => {
-    openLink(RESUME_LINK);
-  };
+  const sectionLinkProps = (to) => ({
+    to,
+    className: "nav-item",
+    onClick: handleNavInteraction,
+  });
 
   return (
     <nav className="navbar">
       <ul className={isMobileMenuOpen ? "nav-links mobile-menu" : "nav-links"}>
         <li>
-          <p onClick={() => scrollToSection("home")}>Home</p>
+          <Link
+            to="/"
+            className="nav-item"
+            onClick={(e) => {
+              handleNavInteraction();
+              if (location.pathname === "/" && !location.hash) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <p onClick={() => scrollToSection("experience")}>About</p>
+          <Link {...sectionLinkProps("/#experience")}>Experience</Link>
         </li>
         {width > 700 && (
           <li>
-            <p onClick={() => scrollToSection("testimonial")}>Testimonials</p>
+            <Link {...sectionLinkProps("/#testimonials")}>Testimonials</Link>
           </li>
         )}
         <li>
-          <p onClick={() => handleResumeClick()}>Resume</p>
+          <Link
+            to="/resume"
+            className="nav-item"
+            onClick={handleNavInteraction}
+          >
+            Resume
+          </Link>
         </li>
       </ul>
       <div className="hamburger" onClick={toggleMobileMenu}>
-        {/* Hamburger menu icon */}
         <span className={`bar bar1 ${isMobileMenuOpen ? "open" : ""}`}></span>
         <span className={`bar bar2 ${isMobileMenuOpen ? "open" : ""}`}></span>
         <span className={`bar bar3 ${isMobileMenuOpen ? "open" : ""}`}></span>
