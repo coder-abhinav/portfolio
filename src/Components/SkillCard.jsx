@@ -20,17 +20,19 @@ const SkillCard = ({
       onMouseEnter={handleFlip}
       onMouseLeave={handleFlip}
     >
-      <div className="skill-card-inner">
-        {/* Front Side */}
-        <div className="skill-card-front">
-          <img src={image} alt="logo" className="skill-logo" />
-          <p>{skillName}</p>
-          <Rating rating={rating} />
-        </div>
+      <div className="skill-card-perspective">
+        <div className="skill-card-inner">
+          {/* Front Side */}
+          <div className="skill-card-front">
+            <img src={image} alt="logo" className="skill-logo" />
+            <p>{skillName}</p>
+            <Rating rating={rating} />
+          </div>
 
-        {/* Back Side */}
-        <div className="skill-card-back">
-          <p>{backContent}</p>
+          {/* Back Side */}
+          <div className="skill-card-back">
+            <p>{backContent}</p>
+          </div>
         </div>
       </div>
     </div>

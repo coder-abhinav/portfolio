@@ -37,7 +37,8 @@
   align-items: center;
 }
 
-.nav-links li p {
+.nav-links li p,
+.nav-links li a.nav-item {
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -46,7 +47,8 @@
   cursor: pointer;
 }
 
-.nav-links li p:hover {
+.nav-links li p:hover,
+.nav-links li a.nav-item:hover {
   color: #9b51e0;
 }
 

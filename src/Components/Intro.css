@@ -1,38 +1,80 @@
 .intro-container {
   flex-direction: column;
 }
-.intro-image-container {
-  margin-top: 7%;
-}
 .intro-image {
+  display: block;
   height: 300px;
   width: 300px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom center;
   border-radius: 10px;
   box-shadow: #eeeeee59 0px 5px 15px;
 }
+
+.intro-image-container {
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+}
 .wrapper {
-  font-size: 41px;
+  font-size: clamp(1.35rem, 3.2vw + 0.85rem, 2.5625rem);
   font-weight: bolder;
   padding: 20px 0;
-}
-.flip div {
-  animation: flip 6s infinite;
-  transition: 0.5s;
-  animation-delay: 2s;
-  z-index: -1;
-  font-size: 41px;
+  line-height: 1.3;
 }
 
-p {
+.flip-viewport {
   display: inline-block;
-  height: 41px;
+  vertical-align: text-bottom;
+  height: 1.3em;
+  line-height: 1.3;
   overflow: hidden;
-  margin: 0px 2px;
-  font-size: 30px;
-  position: relative;
+  margin-inline: 0.12em;
+  text-align: center;
 }
-span {
-  display: block;
+
+.flip-track {
+  display: flex;
+  flex-direction: column;
+  animation: intro-name-roll 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.flip-item {
+  flex: 0 0 auto;
+  height: 1.3em;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-track {
+    animation: none;
+    transform: translateY(0);
+  }
+}
+
+@keyframes intro-name-roll {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-1.3em);
+  }
+  50%,
+  70% {
+    transform: translateY(-2.6em);
+  }
+  75%,
+  100% {
+    transform: translateY(-3.9em);
+  }
 }
 .social-media {
   display: flex;
